@@ -1,12 +1,11 @@
 # Code from Pytorch docs
 # I will commentate
 
-# USING OFFICIAL PYTORCH COMMANDS
+# USING OFFICIAL PYTORCH DATASETS
 
 import torch
 from torchvision import datasets
 from torchvision.transforms import v2
-import matplotlib.pyplot as plt
 
 Fashion_training_data = datasets.FashionMNIST(
     root="data", # Location
@@ -50,6 +49,8 @@ class CustomImageDataset(Dataset):
 
         # file path for images
         self.img_dir = img_dir
+
+        # SEE TRANSFORMS.PY
         self.transform = transform
         self.target_transform = target_transform
 
