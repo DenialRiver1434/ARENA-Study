@@ -13,6 +13,9 @@ Can modify from finished code instead of building from scratch.
 Some useful functions for debugging:
 - print("after ToTensor:", x.shape, x.dtype)  
     * e.g. torch.Size([3, 224, 224]) torch.float32
-    * Provides shape of tensor
+- If code looks too simple, it is probably inheriting some function like __call__
 
-torchinfo.summary(model, input_size=(1, 3, 224, 224))
+Important Facts
+- To track tensor for gradient computation, turn requires_grad=True
+- optimizer.zero_grad() clears out this tracking
+- Hyperparameters are stuff like epoch_time, batch_size; parameters are within the model
